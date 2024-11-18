@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Body styling */
+        body {
+            background-color: pink;
+            color: maroon;
+            text-align: center;
+            font-family: 'Californian FB', serif;
+            font-size: large;
+            margin: 0;
+            padding-top: 100px; /* Offset to avoid content hiding under the fixed header */
+        }
+
+        /* Header styling */
+        header {
+            background-color: rgb(253, 125, 147);
+            color: maroon;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 5px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for a floating effect */
+        }
+
+        /* Form styling */
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Label and input styling */
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: medium;
+            box-sizing: border-box;
+        }
+
+        /* Textarea styling */
+        #comment {
+            height: 120px;
+            width: 100%;
+            resize: vertical;
+        }
+
+        /* Button styling */
+        input[type="submit"], input[type="reset"] {
+            font-size: medium;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: rgb(253, 125, 147);
+            color: maroon;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: rgb(252, 94, 120);
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed header section -->
+    <header>
+        <h1><u>Contact Us</u></h1>
+    </header>
+
+    <!-- Contact form section -->
+    <form action="/action_page.php">
+        <p>Please fill out this form as it will be essential for this process.</p>
+
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname">
+
+        <label for="lname">Last Name:</label> 
+        <input type="text" id="lname" name="lname">
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+
+        <label for="comment">Comments:</label>
+        <textarea id="comment" name="comment"></textarea>
+
+        <input type="submit" value="Contact">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
